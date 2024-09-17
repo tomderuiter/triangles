@@ -7,6 +7,8 @@ func main() {
 
 var A, B, C int
 
+for {
+
 fmt.Print("Enter the first number: ")
 fmt.Scan(&A)
 
@@ -28,5 +30,17 @@ fmt.Println("This is an isosceles triangle")
 
 } else {
     fmt.Println("This is a scalene triangle")
+
+}
+
+var answer string
+
+fmt.Println("Do you want to classify another triangle? (yes/no)")
+fmt.Scan(&answer)
+
+if answer == "yes" {
+
+} else {
+break
 
 }
