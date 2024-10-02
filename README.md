@@ -1,42 +1,5 @@
-package main
+cd to the root directory e.g. cd triangles
+go mod init github.com/tomderuiter/triangles
+go mod tidy
 
-import "fmt"
-
-func main() {
-    fmt.Println("I will help you classify the right triangle by side. Please enter the length of all three sides.")
-
-var A, B, C int
-
-for {
-fmt.Print("Enter the first number: ")
-fmt.Scan(&A)
-
-fmt.Print("Enter the second number: ")
-fmt.Scan(&B)
-
-fmt.Print("Enter the third number: ")
-fmt.Scan(&C)
-
-if A <= 0 || B <= 0 || C <= 0 {
-fmt.Println("This is not a triangle. Please try again :(")
-return
-} else if A == B && B == C {
-fmt.Println("This is an equilateral triangle.")
-} else if A == B || B == C || C == A {
-fmt.Println("This is an isosceles triangle.")
-} else {
-fmt.Println("This is a scalene triangle.")
-}
-
-var answer string
-
-fmt.Println("Do you want to classify another triangle? (yes/no)")
-fmt.Scanln(&answer)
-
-if answer != "yes" {
-break
-}
-
-}
-
-}
+go run main.go
